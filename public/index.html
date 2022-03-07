@@ -40,4 +40,13 @@
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
   </body>
+  <script>
+    let variable = "prueba";
+    const event = new Event("setToken");
+    document.addEventListener("setToken", function (e) {
+      document.getElementById("clientId").innerHTML = e.detail.clientId;
+      test = e.detail;
+    });
+    document.dispatchEvent(event);
+  </script>
 </html>
